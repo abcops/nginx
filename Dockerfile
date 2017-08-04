@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install --no-install-recommends --no-install-sugge
     && rm -rf /var/lib/apt/lists/*
 
 COPY config/ /
-RUN chmod +x init.sh
+RUN chmod +x init.sh && mkdir -p /var/run/nslcd/
 
 EXPOSE 443
 
